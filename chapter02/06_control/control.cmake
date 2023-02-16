@@ -1,0 +1,5 @@
+set(VAR1 FALSE)
+set(VAR2 "VAR1")
+if(NOT ${VAR2})
+    message("VAR1 : ${VAR1}")
+endif()

@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 3.20.0)
+project(test)
+
+if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+    message(STATUS "Doing things the usual way")
+elseif(CMAKE_SYSTEM_NAME STREQUAL "Darwin")
+    message(STATUS "Thinking differently")
+elseif(CMAKE_SYSTEM_NAME STREQUAL "Windows")
+    message(STATUS "I'm supported here too.")
+elseif(CMAKE_SYSTEM_NAME STREQUAL "AIX")
+    message(STATUS "I buy mainframes.")
+else()
+    message(STATUS "This is ${CMAKE_SYSTEM_NAME} speaking.")
+endif()
+
+message(${CMAKE_SYSTEM_NAME})
+message(${CMAKE_HOST_WIN32})
+
+if(CMAKE_SIZEOF_VOID_P EQUAL 8)
+    message(STATUS "Target is 64 bits")
+endif()
