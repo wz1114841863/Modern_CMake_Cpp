@@ -1,0 +1,8 @@
+digraph "drawing" {
+node [
+  fontsize = "12"
+];
+    "node1" [ label = "drawing", shape = octagon ];
+    "node2" [ label = "gui_app", shape = egg ];
+    "node2" -> "node1" [ style = dotted ] // gui_app -> drawing
+}
