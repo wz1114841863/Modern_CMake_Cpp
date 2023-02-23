@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.20.0)
+project(configure)
+
+add_executable(configure main.cpp)
+set(FOO_ENABLE ON)
+set(FOO_STRING1 "abc")
+set(FOO_STRING2 "def")
+configure_file(configure.h.in configure/configure.h)
+message("CMAKE_CURRENT_BINARY_DIR: " ${CMAKE_CURRENT_BINARY_DIR})
+target_include_directories(configure PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/configure/")
